@@ -7,6 +7,7 @@ import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import { createPinia } from 'pinia'
 import './mock'
+import '@/router/guard'
 
 const app = createApp(App)
 
@@ -15,6 +16,6 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 }
 const pina = createPinia();
 app.use(ElementPlus);
-app.use(router);
 app.use(pina);
+app.use(router);
 app.mount('#app')

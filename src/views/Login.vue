@@ -24,6 +24,7 @@ import { reactive, ref } from "vue";
 import type { FormInstance, FormRules } from 'element-plus'
 import logo from "@/assets/logo.png"
 import {useUserStore} from '@/store/auth.ts'
+import { useRouter } from "vue-router";
 
 interface RuleForm {
     username: string;
@@ -45,11 +46,13 @@ const rules = reactive<FormRules<RuleForm>>({
     ],
 })
 const userStore = useUserStore();
+const router = useRouter();
 function handleLogin() {
     formRef.value?.validate(async (valid: boolean) => { //?.可选链操作符 
         if(valid){
             // 校验通过
-            userStore.login(ruleForm);
+            await userStore.login(ruleForm);
+            router.push("/")
         }
     })
 }
