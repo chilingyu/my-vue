@@ -28,6 +28,13 @@ export const useUserStore = defineStore('user', {
             } catch (error) {
                 console.log("error", error)
             }
+        },
+        logout(){
+            this.token=""
+            this.roles=[]
+            this.userName=""
+            this.menu=[]
+            sessionStorage.clear()
         }
     }
 })
