@@ -1,6 +1,8 @@
 import { defineStore } from "pinia";
 import { loginApi } from "@/api/user"
 
+// 选项式
+
 interface LoginParams {
     username: string;
     password: string

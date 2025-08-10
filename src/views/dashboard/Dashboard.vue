@@ -1,4 +1,4 @@
 <template>
 
-    营销看板
+    数据看板
 </template>
