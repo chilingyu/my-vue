@@ -51,8 +51,8 @@
             <el-table-column prop="name" label="站点名称" />
             <el-table-column prop="id" label="站点ID" />
             <el-table-column prop="city" label="所属城市" />
-            <el-table-column prop="fast" label="快充数" />
-            <el-table-column prop="slow" label="慢充数" />
+            <el-table-column prop="fast" label="快充数" align="right" />
+            <el-table-column prop="slow" label="慢充数" align="right" />
             <el-table-column prop="status" label="充电站状态">
                 <!-- scope是列表的一行数据 -->
                 <template #default="scope">
@@ -62,8 +62,8 @@
                     <el-tag v-if="scope.row.status == 5" type="danger">待维修</el-tag>
                 </template>
             </el-table-column>
-            <el-table-column prop="now" label="正在充电" />
-            <el-table-column prop="fault" label="故障数" />
+            <el-table-column prop="now" label="正在充电" align="right" />
+            <el-table-column prop="fault" label="故障数" align="right" />
             <el-table-column prop="person" label="站点负责人" />
             <el-table-column prop="tel" label="负责人电话" />
             <el-table-column label="操作">
