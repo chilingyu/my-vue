@@ -5,7 +5,7 @@ const routes: RouteRecordRaw[] = [
         path: "/",
         name: "Home",
         component: () => import("@/layouts/DefaultLayout.vue"),
-        redirect:"/dashboard", //重定向
+        redirect: "/dashboard", //重定向
         children: [
             {
                 path: "/dashboard",
@@ -35,7 +35,10 @@ const routes: RouteRecordRaw[] = [
             {
                 path: "/operations/orders",
                 name: "orders",
-                component: () => import("@/views/operations/Orders.vue")
+                component: () => import("@/views/operations/Orders.vue"),
+                meta: {
+                    KeepAlive: true
+                }
             },
             {
                 path: "/operations/detail",
@@ -61,16 +64,16 @@ const routes: RouteRecordRaw[] = [
                 path: "/document",
                 name: "document",
                 component: () => import("@/views/document/Document.vue"),
-                meta:{
-                    needAuth:["admin","manager"]
+                meta: {
+                    needAuth: ["admin", "manager"]
                 }
             },
             {
                 path: "/system",
                 name: "system",
                 component: () => import("@/views/system/System.vue"),
-                meta:{
-                    needAuth:["admin"]
+                meta: {
+                    needAuth: ["admin"]
                 }
             },
             {

@@ -14,11 +14,14 @@
     "axios": "^1.11.0",
     "echarts": "^6.0.0",
     "element-plus": "^2.9.11",
+    "file-saver": "^2.0.5",
     "pinia": "^3.0.2",
     "vue": "^3.5.13",
-    "vue-router": "^4.5.1"
+    "vue-router": "^4.5.1",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@types/file-saver": "^2.0.7",
     "@types/node": "^22.15.29",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/tsconfig": "^0.7.0",

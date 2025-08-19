@@ -47,7 +47,7 @@
     </el-card>
     <el-card class="mt">
         <el-table :data="tableData" style="width: 100%" v-loading="loading">
-            <el-table-column type="index" width="80" label="序号" />
+            <el-table-column type="index" width="70" label="序号" align="center" />
             <el-table-column prop="name" label="站点名称" />
             <el-table-column prop="id" label="站点ID" />
             <el-table-column prop="city" label="所属城市" />
