@@ -34,7 +34,7 @@ function numformatDecimal(cellValue: any): string {
 }
 
 // 整数千位分隔符格式化（不带小数）
-function formatInteger(row: any, column: any, cellValue: any): string {
+function formatInteger(cellValue: any): string {
     if (cellValue === null || cellValue === undefined) return '-';
     if (typeof (cellValue) == 'string' && cellValue.indexOf(',') != -1) return cellValue
     return Number(cellValue).toLocaleString('en-US', {
@@ -43,7 +43,7 @@ function formatInteger(row: any, column: any, cellValue: any): string {
 }
 
 // 带小数位的千位分隔符格式化
-function formatDecimal(row: any, column: any, cellValue: any): string {
+function formatDecimal(cellValue: any): string {
     if (cellValue === null || cellValue === undefined) return '-';
     if (typeof (cellValue) == 'string' && cellValue.indexOf(',') != -1) return cellValue
     return Number(cellValue).toLocaleString('en-US', {

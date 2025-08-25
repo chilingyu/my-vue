@@ -608,6 +608,8 @@ const today = new Date();
 const formattedDate = ref(
     `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`
 );
+
+console.log(555,import.meta.env.VITE_API_URL)
 </script>
 
 <style scoped lang="less">
